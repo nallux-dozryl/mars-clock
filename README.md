@@ -2,8 +2,7 @@
 A 24-hour martian clock
 
 ### Disclaimer
-- This doesn't actually work
-- I can't get an accurate date for some reason
+- Currently only shows you Mars Sol Date(MSD) in \`@rq\`seconds
 - Inspiration: [Mars Clock by James Tauber](http://marsclock.com/)
 
 ### Goals
