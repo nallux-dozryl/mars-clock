@@ -2,7 +2,7 @@
 24-hour Martian Clock - Mars Sol Date (MSD)
 
 ### What It Does
-Takes in Terran time `@da` and returns Martian Time `[d=@ud h=@ud m=@ud s=@ud f=%~]`
+Takes in a Terran Date `@da` and returns a Martian Date `[d=@ud h=@ud m=@ud s=@ud f=%~]`
 ```
 > +mars-clock now
 [d=52.635 h=22 m=35 s=58 f=~]
