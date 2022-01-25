@@ -20,7 +20,8 @@
     =/  hour       (sun:rq (mul hor:yo h.yel))
     =/  dey        (sun:rq (mul day:yo d.yel))
     :(add:rq dey hour minute second subsecond)
-  ++  present  :: number of seconds since noon January 1st 2000                                                                        
+  :: number of seconds since noon January 1st 2000                                                                        
+  ++  present
     |=  date=@da                                                            
     (sub:rq (seconds date) (seconds ~2000.1.1..12.00.00))
   ++  sync
@@ -48,9 +49,11 @@
     =/  days    (mul day:yo (sol-days date))
     =/  hours   (mul hor:yo (sol-hours date))
     =/  int     (abs:si (tail (toi:rq (msd date))))
-    (div (sub (sub (add 60 int) days) hours) mit:yo) :: it's still not accurate and adding 60 seconds fixes it for now
+    :: it's still not accurate and adding 60 seconds fixes it for now
+    (div (sub (sub (add 60 int) days) hours) mit:yo)
   ++  sol-seconds
     |=  date=@da
     =/  int     (abs:si (tail (toi:rq (msd date))))
-    (mod (add 7 int) 60)  :: again, added 7 to make it accurate
+    :: again, added 7 to make it accurate
+    (mod (add 7 int) 60)
 --
